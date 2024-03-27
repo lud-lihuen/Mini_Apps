@@ -17,14 +17,28 @@ body {
 }
 
 .table td {
-  vertical-align: middle;
   color: rgb(100, 180, 30);
-}
-
-.text-center {
-  text-align: center;
+  padding: 0.6rem;
+  vertical-align: middle;
 }
 
 #total {
   font-weight: bold;
+}
+
+footer {
+  color: #6c757d;
+  font-size: 0.8em;
+}
+
+footer a,
+footer a:active,
+footer a:visited {
+  color: rgb(100, 180, 30);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(100, 180, 30);
+  text-decoration: underline;
 }
