@@ -1,0 +1,21 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.table {
+  border-bottom: 2px solid rgb(100, 180, 30);
+}
+
+.table td {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.table td:hover {
+  background-color: #424649;
+}
