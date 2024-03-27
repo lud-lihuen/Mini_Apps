@@ -1,15 +1,6 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-}
-
 .table thead th {
   border-top: 1px solid rgb(100, 180, 30);
   border-bottom: 2px solid rgb(100, 180, 30);
-}
-
-.table th {
-  vertical-align: middle;
 }
 
 .table tbody tr:hover {
@@ -24,21 +15,4 @@ body {
 
 #total {
   font-weight: bold;
-}
-
-footer {
-  color: #6c757d;
-  font-size: 0.8em;
-}
-
-footer a,
-footer a:active,
-footer a:visited {
-  color: rgb(100, 180, 30);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: rgb(100, 180, 30);
-  text-decoration: underline;
 }

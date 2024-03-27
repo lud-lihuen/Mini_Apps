@@ -1,26 +1,12 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.form-control,
-.form-control:active,
-.form-control:focus {
-  background-color: #222;
-  border: 1px solid rgb(100, 180, 30);
-  color: #fff;
-  box-shadow: none;
+.btn-sm {
+  padding: 0.1rem 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .btn:active,
 .btn:focus {
   box-shadow: none;
-}
-
-.btn-sm {
-  padding: 0.1rem 0.3rem;
-  font-size: 0.8rem;
-  font-weight: 400;
 }
 
 .list-group-item {
@@ -52,21 +38,4 @@ body {
 
 .item-container.completed {
   text-decoration: line-through;
-}
-
-footer {
-  color: #6c757d;
-  font-size: 0.8em;
-}
-
-footer a,
-footer a:active,
-footer a:visited {
-  color: rgb(100, 180, 30);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: rgb(100, 180, 30);
-  text-decoration: underline;
 }
