@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de microrrelatos</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="EditorMicrorrelatos.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Editor de microrrelatos</h1>
+
+    <div class="form-group">
+      <label for="maxWords">Límite máximo de palabras:</label>
+      <input type="number" class="form-control" id="maxWords" style="display: inline; max-width: 100px;" min="1"
+        value="200">
+    </div>
+
+    <div class="form-group">
+      <label for="textInput">Escribe aquí tu microrrelato:</label>
+      <textarea class="form-control" id="textInput" rows="12"></textarea>
+    </div>
+    <div id="wordCountIndicator" class="text-muted">Palabras escritas: 0 / 200</div>
+
+    <div class="form-group d-flex justify-content-end">
+      <button class="btn btn-dark mr-2" id="loadButton">Cargar</button>
+      <button class="btn btn-success" id="saveButton">Guardar</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="EditorMicrorrelatos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.form-control,
+.form-control:active,
+.form-control:focus {
+  background-color: #222;
+  border: 1px solid rgb(100, 180, 30);
+  color: #fff;
+  box-shadow: none;
+}
+
+.red {
+  color: orangered !important;
+}

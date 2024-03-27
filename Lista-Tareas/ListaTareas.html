@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ListaTareas.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Lista de tareas</h1>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group my-4">
+          <input type="text" id="taskInput" class="form-control dark-input" placeholder="Añade una tarea a la lista">
+
+          <div class="input-group-append">
+            <button class="btn btn-success" id="addTaskBtn">Añadir</button>
+          </div>
+        </div>
+
+        <ul id="taskList" class="list-group">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="ListaTareas.js"></script>
+</body>
+
+</html>
