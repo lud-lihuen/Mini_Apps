@@ -1,2 +1,2 @@
-# Mini_Apps
+# Mini Apps
 Aplicaciones web sencillas
