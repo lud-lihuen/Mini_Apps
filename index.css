@@ -9,6 +9,7 @@ body {
 
 .table {
   border-bottom: 2px solid rgb(100, 180, 30);
+  margin-bottom: 0px;
 }
 
 .table td {
