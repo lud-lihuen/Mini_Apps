@@ -1,21 +1,25 @@
-let currentResult = '';
 const resultElement = document.getElementById('result');
+let currentResult = '';
 
+// Escribir en pantalla
 function appendNumber(number) {
   currentResult += number;
   resultElement.value = currentResult;
 }
 
-function clearResult() {
-  currentResult = '';
-  resultElement.value = '';
-}
-
+// Borrar último caracter en pantalla
 function deleteLast() {
   currentResult = currentResult.slice(0, -1);
   resultElement.value = currentResult;
 }
 
+// Borrar pantalla
+function clearResult() {
+  currentResult = '';
+  resultElement.value = '';
+}
+
+// Calcular resultado
 function calculate() {
   try {
     const result = eval(currentResult);

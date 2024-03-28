@@ -1,10 +1,8 @@
-// HTML Elements
 const board = document.getElementById('board');
 const scoreBoard = document.getElementById('scoreBoard');
 const startButton = document.getElementById('start');
 const gameOverSign = document.getElementById('gameOver');
 
-// Game settings
 const boardSize = 10;
 const gameSpeed = 100;
 const squareTypes = {
@@ -19,7 +17,6 @@ const directions = {
   ArrowLeft: -1,
 };
 
-// Game variables
 let snake;
 let score;
 let direction;
@@ -27,14 +24,7 @@ let boardSquares;
 let emptySquares;
 let moveInterval;
 
-const drawSnake = () => {
-  snake.forEach(square => drawSquare(square, 'snakeSquare'));
-}
-
-// Rellena cada cuadrado del tablero
-// @params 
-// square: posicion del cuadrado,
-// type: tipo de cuadrado (emptySquare, snakeSquare, foodSquare)
+// Función para pintar los distintos cuadrados del tablero
 const drawSquare = (square, type) => {
   const [row, column] = square.split('');
   boardSquares[row][column] = squareTypes[type];
@@ -50,12 +40,23 @@ const drawSquare = (square, type) => {
   }
 }
 
+// Función para dibujar la viborita
+const drawSnake = () => {
+  snake.forEach(square => drawSquare(square, 'snakeSquare'));
+}
+
+// Función para dibujar una comida en lugar aleatorio
+const createRandomFood = () => {
+  const randomEmptySquare = emptySquares[Math.floor(Math.random() * emptySquares.length)];
+  drawSquare(randomEmptySquare, 'foodSquare');
+}
+
+// Función para mover la viborita
 const moveSnake = () => {
   const newSquare = String(
     Number(snake[snake.length - 1]) + directions[direction])
     .padStart(2, '0');
   const [row, column] = newSquare.split('');
-
 
   if (newSquare < 0 ||
     newSquare > boardSize * boardSize ||
@@ -75,22 +76,31 @@ const moveSnake = () => {
   }
 }
 
+// Función para actualizar puntaje
+const updateScore = () => {
+  scoreBoard.innerText = score - 4;
+}
+
+// Función para cuando la viborita come
 const addFood = () => {
   score++;
   updateScore();
   createRandomFood();
 }
 
+// Función para terminar el juego al perder
 const gameOver = () => {
   gameOverSign.style.display = 'block';
   clearInterval(moveInterval)
   startButton.disabled = false;
 }
 
+// Función para cambiar de dirección de movimiento
 const setDirection = newDirection => {
   direction = newDirection;
 }
 
+// Función para controlar el movimiento con las teclas de flecha
 const directionEvent = key => {
   switch (key.code) {
     case 'ArrowUp':
@@ -108,15 +118,7 @@ const directionEvent = key => {
   }
 }
 
-const createRandomFood = () => {
-  const randomEmptySquare = emptySquares[Math.floor(Math.random() * emptySquares.length)];
-  drawSquare(randomEmptySquare, 'foodSquare');
-}
-
-const updateScore = () => {
-  scoreBoard.innerText = score - 4;
-}
-
+// Función para crear el tablero de juego
 const createBoard = () => {
   boardSquares.forEach((row, rowIndex) => {
     row.forEach((column, columnndex) => {
@@ -130,6 +132,7 @@ const createBoard = () => {
   })
 }
 
+// Función para preparar el tablero para iniciar el juego
 const setGame = () => {
   snake = ['00', '01', '02', '03'];
   score = snake.length;
@@ -140,6 +143,7 @@ const setGame = () => {
   createBoard();
 }
 
+// Función para iniciar el juego
 const startGame = () => {
   setGame();
   gameOverSign.style.display = 'none';
@@ -151,4 +155,5 @@ const startGame = () => {
   moveInterval = setInterval(() => moveSnake(), gameSpeed);
 }
 
+// Evento del botón para comenzar nuevo juego
 startButton.addEventListener('click', startGame);

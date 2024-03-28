@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('weatherForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let location = document.getElementById('locationInput').value;
-    getWeather(location);
-  });
 
   // Función para obtener los datos del clima desde la API
   function getWeather(location) {
@@ -40,4 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     weatherResult.style.display = 'block';
   }
+
+  // Evento del submit ver clima
+  document.getElementById('weatherForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let location = document.getElementById('locationInput').value;
+    getWeather(location);
+  });
 });
